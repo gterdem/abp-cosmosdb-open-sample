@@ -8,11 +8,18 @@
 
   <ItemGroup>
     <Compile Remove="Volo\Abp\CosmosDbContextOptionsExtensions.cs" />
+    <Compile Remove="Volo\Abp\CosmosDB\ICosmosDbContextProvider.cs" />
+    <Compile Remove="Volo\Abp\Uow\CosmosDB\UnitOfWorkCosmosDbContextProvider.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="3.1.0" />
     <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Volo\Abp\CosmosDB\" />
+    <Folder Include="Volo\Abp\Uow\CosmosDB\" />
   </ItemGroup>
 
 </Project>

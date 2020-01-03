@@ -1,11 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using Volo.Abp.CosmosDB;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.DependencyInjection;
-using Volo.Abp.Uow.EntityFrameworkCore;
 
 namespace Volo.Abp.Uow.EntityFrameworkCore
 {
