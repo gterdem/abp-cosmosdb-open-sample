@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Volo.Abp.EntityFrameworkCore.CosmosDB</AssemblyName>
+    <PackageId>Volo.Abp.EntityFrameworkCore.CosmosDB</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Volo\Abp\CosmosDbContextOptionsExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="3.1.0" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="1.1.2" />
+  </ItemGroup>
+
+</Project>
