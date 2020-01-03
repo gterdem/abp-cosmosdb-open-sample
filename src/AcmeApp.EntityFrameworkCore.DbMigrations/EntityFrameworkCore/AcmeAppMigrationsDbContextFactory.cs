@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-//using Volo.Abp.EntityFrameworkCore; //Not default, added for extension
+using Volo.Abp.EntityFrameworkCore; //Not default, added for extension
 
 namespace AcmeApp.EntityFrameworkCore
 {

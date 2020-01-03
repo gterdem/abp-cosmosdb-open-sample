@@ -209,5 +209,12 @@ namespace AcmeApp.Web
             app.UseAuditing();
             app.UseMvcWithDefaultRouteAndArea();
         }
+        public override void OnPostApplicationInitialization(ApplicationInitializationContext context)
+        {
+            var db = context.ServiceProvider.GetRequiredService<AcmeAppMigrationsDbContext>();
+            //db.Database.EnsureDeleted();
+            //db.Database.EnsureCreated();
+            base.OnPostApplicationInitialization(context);
+        }
     }
 }

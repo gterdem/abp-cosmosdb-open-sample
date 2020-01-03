@@ -10,6 +10,7 @@ using Volo.Abp.PermissionManagement.Identity;
 using Volo.Abp.PermissionManagement.IdentityServer;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using Volo.Abp.Uow;
 
 namespace AcmeApp
 {
@@ -32,6 +33,10 @@ namespace AcmeApp
             Configure<AbpMultiTenancyOptions>(options =>
             {
                 options.IsEnabled = MultiTenancyConsts.IsEnabled;
+            });
+            Configure<AbpUnitOfWorkOptions>(options =>
+            {
+                options.IsTransactional = false;
             });
         }
     }

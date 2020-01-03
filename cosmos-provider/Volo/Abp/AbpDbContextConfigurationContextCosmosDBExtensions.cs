@@ -36,6 +36,7 @@ namespace Volo.Abp.EntityFrameworkCore
            [NotNull] this AbpDbContextConfigurationContext context,
            [CanBeNull] Action<CosmosDbContextOptionsBuilder> cosmosOptionsAction = null)
         {
+            //context.ConnectionStringName = "AbpBackgroundJobs" hits all the time
             if (context.ExistingConnection != null)
             {
                 var connStringParts = context.ExistingConnection.ConnectionString.ParseConnectionString();

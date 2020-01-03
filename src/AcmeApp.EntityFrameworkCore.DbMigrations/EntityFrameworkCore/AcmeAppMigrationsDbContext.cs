@@ -22,7 +22,6 @@ namespace AcmeApp.EntityFrameworkCore
         public AcmeAppMigrationsDbContext(DbContextOptions<AcmeAppMigrationsDbContext> options)
             : base(options)
         {
-
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

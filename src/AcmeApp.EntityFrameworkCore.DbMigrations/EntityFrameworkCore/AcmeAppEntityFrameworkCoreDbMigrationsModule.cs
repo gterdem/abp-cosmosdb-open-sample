@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
+using Volo.Abp;
 using Volo.Abp.Modularity;
 
 namespace AcmeApp.EntityFrameworkCore
