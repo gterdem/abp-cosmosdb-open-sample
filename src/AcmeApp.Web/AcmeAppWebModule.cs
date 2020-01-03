@@ -35,6 +35,7 @@ using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Abp.Uow;
 
 namespace AcmeApp.Web
 {
@@ -79,6 +80,11 @@ namespace AcmeApp.Web
             ConfigureNavigationServices();
             ConfigureAutoApiControllers();
             ConfigureSwaggerServices(context.Services);
+
+            Configure<AbpUnitOfWorkOptions>(options =>
+            {
+                options.IsTransactional = false;
+            });
         }
 
         private void ConfigureUrls(IConfiguration configuration)
@@ -211,10 +217,10 @@ namespace AcmeApp.Web
         }
         public override void OnPostApplicationInitialization(ApplicationInitializationContext context)
         {
-            var db = context.ServiceProvider.GetRequiredService<AcmeAppMigrationsDbContext>();
+            //var db = context.ServiceProvider.GetRequiredService<AcmeAppDbContext>();
             //db.Database.EnsureDeleted();
             //db.Database.EnsureCreated();
-            base.OnPostApplicationInitialization(context);
+            //base.OnPostApplicationInitialization(context);
         }
     }
 }

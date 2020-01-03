@@ -34,10 +34,6 @@ namespace AcmeApp
             {
                 options.IsEnabled = MultiTenancyConsts.IsEnabled;
             });
-            Configure<AbpUnitOfWorkOptions>(options =>
-            {
-                options.IsTransactional = false;
-            });
         }
     }
 }
